@@ -1,0 +1,16 @@
+ame: Hello World Workflow
+
+on: 
+  push:
+  pull_request:
+
+jobs:
+  say-hello:
+    runs-on: ubuntu-latest  # Use the latest Ubuntu environment
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4  # Fetch the code from the repo
+
+      - name: Print Hello Message
+        run: echo "Hello, GitHub Actions! 🚀"
